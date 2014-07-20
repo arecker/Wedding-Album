@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="bootstrap.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Tinos:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/site.css" />
     <style>
         /* Font */
         h1, h2, h3, h4, p, li, button { font-family: 'Tinos', serif !important; }
@@ -37,7 +36,7 @@
 <body>
     <div class="container main">
         <p class="text-center buttons">
-            <a href="index.html">
+            <a href="ReckerWeddingPictures.zip">
                 <button type="button" class="btn btn-lg btn-info"><i class="fa fa-cloud-download"></i> Download them all (zip)</button>
             </a>
             <a href="http://google.com">
@@ -49,9 +48,12 @@
         
           {% for image in images %}
           <div class="col-xs-6 col-md-3">
-            <a href="{{ image }}" class="thumbnail">
-              <img class="lazy" data-original="{{ image }}"/>
+            <a href="{{ image.src }}" class="thumbnail">
+              <img class="lazy" data-original="{{ image.src }}"/>
             </a>
+            <div class="text-center caption">
+                <small>{{ image.number }}</small>
+            </div>
           </div>
           {% endfor %}
           
