@@ -1,0 +1,4 @@
+for file in $(ls images)
+do
+	/usr/bin/convert -thumbnail 200 images/$file thumbs/$file
+done

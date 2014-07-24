@@ -18,7 +18,7 @@ def generate_page():
 	i = 1
 	for file in sorted(listdir(images_path)):
 		if file != '.gitignore':
-			images.append(Image("images/" + file, i))
+			images.append(Image(file, i))
 			i = i + 1
 
 	env = Environment(loader=FileSystemLoader(src_path))
