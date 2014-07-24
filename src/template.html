@@ -29,6 +29,10 @@
         .buttons {
             margin-bottom: 3em;
         }
+        
+        .lazy {
+			height: 150px !important;
+		}
 
     </style>
 </head>
@@ -49,7 +53,7 @@
           {% for image in images %}
           <div class="col-xs-6 col-md-3">
             <a href="{{ image.src }}" class="thumbnail">
-              <img class="lazy" data-original="{{ image.src }}"/>
+              <img class="lazy" data-original="{{ image.src }}" height="120" />
             </a>
             <div class="text-center caption">
                 <small>{{ image.number }}</small>

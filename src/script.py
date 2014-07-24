@@ -16,7 +16,7 @@ def generate_page():
 
 	images = []
 	i = 1
-	for file in listdir(images_path):
+	for file in sorted(listdir(images_path)):
 		if file != '.gitignore':
 			images.append(Image("images/" + file, i))
 			i = i + 1
