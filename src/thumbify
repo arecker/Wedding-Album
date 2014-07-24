@@ -1,4 +1,8 @@
-for file in $(ls images)
+#!/bin/bash
+# Creates thumbnails for all images
+cd ../public
+for file in $(ls images | grep jpg)
 do
-	/usr/bin/convert -thumbnail 200 images/$file thumbs/$file
+    echo "Thumbing" $file
+    /usr/bin/convert -thumbnail 200 images/$file thumbs/$file
 done
