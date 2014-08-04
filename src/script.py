@@ -39,7 +39,7 @@ def zipper(dir, zip_file):
         	if f != '.gitignore':
 	            fullpath = join(root, f)
 	            archive_name = join(archive_root, f)
-	            print f
+	            print('Zipping ' +  f)
 	            zip.write(fullpath, archive_name, zipfile.ZIP_DEFLATED)
     zip.close()
     return zip_file
